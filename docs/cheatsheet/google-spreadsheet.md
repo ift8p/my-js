@@ -81,7 +81,7 @@ await sheet.loadCells(['B2:D5', 'B50:D55'])
 - `saveUpdatedCells()` - сохраняет все ячейки, которые имеют несохраненные изменения
 - `saveCells(cells: arr)` - сохраняет указанные ячейки. Обычно, проще использовать `saveUpdatedCells()`
 - `resetLocalCache(dataOnly?: bool)` - сбрасывает локальный кэш свойств и данных ячеек
-- `mergeCells(range: RangeGrid, type)` - объединяет ячейки. Про тип объекдинения можно почитать <a href="https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/request#MergeType">здесь</a>
+- `mergeCells(range: RangeGrid, type)` - объединяет ячейки. Про тип объединения можно почитать <a href="https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/request#MergeType">здесь</a>
 - `unmergeCells(range: GridRange)` - разделяет ячейки
 
 ### Обновление свойств
@@ -105,5 +105,5 @@ await sheet.resize({ rowCount: 1000, columnCount: 20 })
 ### Другие
 
 - `clear()` - очищает все данные/ячейки таблицы
-- `delete()` - удаляет табалицу. Таблица становится недоступной в `doc.sheetById` и `doc.sheetByIndex`
+- `delete()` - удаляет таблицу. Таблица становится недоступной в `doc.sheetById` и `doc.sheetByIndex`
 - `copyToSpreadsheet(dest: str)` - копирование таблицы в другой документ. `dest` - `id` другой таблицы
