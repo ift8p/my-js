@@ -305,7 +305,7 @@ for await (const line of lineStream) {
 
 - [fs.createReadStream(path, options?)](https://nodejs.org/api/fs.html#fscreatereadstreampath-options): создает поток (экземпляр `stream.Readable`);
 - [stream.Readable.toWeb(nodeReadable)](https://nodejs.org/api/stream.html#streamreadabletowebstreamreadable): преобразует доступный для чтения поток `Node.js` в веб-поток (экземпляр `ReadableStream`);
-- класс [ChunksToLinesStream](https://2ality.com/2022/06/web-streams-nodejs.html#example%3A-transforming-a-stream-of-arbitrary-chunks-to-a-stream-of-lines) представляет поток для преобразования. Чанки - это небольшие части данных,  производимые потоками. Если у нас есть поток, чанки которого представляют строки произвольной длины, и мы пропускает эти чанки через `ChunksToLinesStream`, то получаем поток с построчными чанками.
+- класс [ChunksToLinesStream](https://2ality.com/2022/06/web-streams-nodejs.html#example%3A-transforming-a-stream-of-arbitrary-chunks-to-a-stream-of-lines) представляет поток для преобразования. Чанки - это небольшие части данных,  производимые потоками. Если у нас есть поток, чанки которого представляют строки произвольной длины, и мы пропускаем эти чанки через `ChunksToLinesStream`, то получаем поток с построчными чанками.
 
 Веб-потоки являются [асинхронно итерируемыми](https://exploringjs.com/impatient-js/ch_async-iteration.html), что позволяет использовать цикл `for-await-of` для их перебора.
 
@@ -542,7 +542,7 @@ assert.deepEqual(
 
 ### 4.3. Определение наличия директории
 
-При создании вложенных директорий и файлов мы не всегда может быть уверены в существовании родительской директории. Следующая функция может в этом помочь:
+При создании вложенных директорий и файлов мы не всегда можем быть уверены в существовании родительской директории. Следующая функция может в этом помочь:
 
 ```javascript
 import * as path from "node:path";
